@@ -9,7 +9,7 @@ public partial class MainPage : ContentPage
 		InitializeComponent();
 	}
 
-	private void OnCounterClicked(object sender, EventArgs e)
+	void OnCounterClicked(object sender, EventArgs e)
 	{
 		count++;
 		CounterLabel.Text = $"Current count: {count}";
