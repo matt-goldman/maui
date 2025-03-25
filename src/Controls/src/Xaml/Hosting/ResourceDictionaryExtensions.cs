@@ -1,6 +1,7 @@
-using System;
+﻿using System;
+using Microsoft.Maui.Hosting;
 
-namespace Microsoft.Maui.Hosting;
+namespace Microsoft.Maui.Controls.Hosting;
 
 public static class ResourceDictionariesMauiAppBuilderExtensoins
 {
@@ -18,4 +19,5 @@ public static class ResourceDictionariesMauiAppBuilderExtensoins
 
         return builder;
     }
+
 }

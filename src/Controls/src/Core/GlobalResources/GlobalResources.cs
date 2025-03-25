@@ -1,5 +1,3 @@
-using System;
-
 namespace Microsoft.Maui.Controls
 {
     public static class GlobalResources
