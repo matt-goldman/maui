@@ -5,6 +5,7 @@
     <VerticalStackLayout BackgroundColor="{StaticResource PrimaryLight}">
         <Label Text="Hello, world!"/>
 
-        <BoxView BackgroundColor="{StaticResource TestDirect}" />
+        <BoxView BackgroundColor="{StaticResource TestDirect}"
+                 HeightRequest="400" />
     </VerticalStackLayout>
 </ContentPage>
