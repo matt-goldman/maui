@@ -4,10 +4,10 @@ public partial class App : Application
 {
 	private readonly Page _page;
 
-	public App(MainPage page)
+	public App()//MainPage page)
 	{
 		InitializeComponent();
-        _page = page;
+		_page = new MainPage();// page;
     }
 
 	protected override Window CreateWindow(IActivationState? activationState)

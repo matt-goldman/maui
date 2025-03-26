@@ -27,7 +27,7 @@ public static class MauiProgram
             {
                 resources.AddXaml("Resources/Styles/Colors.xaml");
                 resources.AddXaml("Resources/Styles/Styles.xaml");
-                resources.Add("TestDirect", Color.FromRgba(16,22,56,0.5));
+                resources.Add("TestDirect", Color.FromRgba(16, 22, 56, 0.5));
             });
 
         builder.Services.AddTransient<MainPage>();

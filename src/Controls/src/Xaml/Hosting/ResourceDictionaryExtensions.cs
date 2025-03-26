@@ -11,8 +11,6 @@ public static class ResourceDictionariesMauiAppBuilderExtensoins
         configure(builderInstance);
 
         var built = builderInstance.Build();
-        foreach (var dict in built.MergedDictionaries)
-            GlobalResources.Current.MergedDictionaries.Add(dict);
 
         foreach (var kvp in built)
             GlobalResources.Current.Add(kvp.Key, kvp.Value);
