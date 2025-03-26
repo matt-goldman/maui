@@ -2,10 +2,13 @@
 
 public partial class App : Application
 {
-	public App()
+	private readonly Page _page;
+
+	public App(MainPage page)
 	{
 		InitializeComponent();
-	}
+        _page = page;
+    }
 
 	protected override Window CreateWindow(IActivationState? activationState)
 	{
@@ -14,7 +17,7 @@ public partial class App : Application
 
 		if (!useShell)
 		{
-			return new Window(new NavigationPage(new MainPage()));
+			return new Window(new NavigationPage(_page));
 		}
 		else
 		{

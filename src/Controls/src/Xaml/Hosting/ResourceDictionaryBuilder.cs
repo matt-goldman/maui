@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Reflection;
 
 namespace Microsoft.Maui.Controls.Hosting;
 
@@ -8,12 +9,18 @@ public class ResourceDictionaryBuilder
 
     public void AddXaml(string xamlPath)
     {
-        var resource = new ResourceDictionary
-        {
-            Source = new Uri($"resource://{xamlPath}", UriKind.RelativeOrAbsolute)
-        };
-        _dict.MergedDictionaries.Add(resource);
+        var dict = new ResourceDictionary();
+        var uri = new Uri(xamlPath, UriKind.RelativeOrAbsolute);
+        var assembly = Assembly.GetExecutingAssembly();
+
+#pragma warning disable IL2026 // If this approach is approved/adopeted we can remove this pragma and replace with a [RequiresUnreferencedCode] attribute, possibly wrap in try/catch too
+        dict.SetAndLoadSource(uri, xamlPath, assembly, lineInfo: null);
+#pragma warning restore IL2026
+
+        _dict.MergedDictionaries.Add(dict);
     }
+
+
 
     public void Add(string key, object value) => _dict.Add(key, value);
 

@@ -2,4 +2,9 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="Maui.Controls.Sample.MainPage"
              xmlns:local="clr-namespace:Maui.Controls.Sample">
+    <VerticalStackLayout BackgroundColor="{StaticResource PrimaryLight}">
+        <Label Text="Hello, world!"/>
+
+        <BoxView BackgroundColor="{StaticResource TestDirect}" />
+    </VerticalStackLayout>
 </ContentPage>
